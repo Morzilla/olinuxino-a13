@@ -1,0 +1,5 @@
+Patches for the A13 Android image found on the Olimex wiki page in order to:
+
+1) support the LCD43TS touch screen
+2) enable the GPIO driver
+

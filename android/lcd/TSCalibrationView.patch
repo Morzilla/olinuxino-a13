@@ -1,0 +1,27 @@
+--- TSCalibrationView.java.orig	2012-03-31 18:13:25.000000000 +0200
++++ TSCalibrationView.java	2013-02-04 20:04:54.000000000 +0100
+@@ -578,11 +578,11 @@
+ 
+     public boolean isFinished() 
+ 	{
+-		int  ret;
++		int  ret = 0;
+ 
+ 		if(mStep >=5)
+ 		{
+-			ret = judge_points(mTargetCaluate);
++			//ret = judge_points(mTargetCaluate);
+ 			if(ret == 0)
+ 			{
+ 			    perform_calibration(5,mTargetCaluate.tppara);
+@@ -733,7 +733,9 @@
+ 		if(mFileExist == false)
+ 		{
+ 			mTargetCaluate.mTargetPoints[mStep].calx = (int)ev.getRawX();
+-        	mTargetCaluate.mTargetPoints[mStep].caly = (int)ev.getRawY();
++        	    mTargetCaluate.mTargetPoints[mStep].caly = (int)ev.getRawY();
++        	    
++        	    Log.d(TAG, "UP - x = " + mTargetCaluate.mTargetPoints[mStep].calx + ", y = " + mTargetCaluate.mTargetPoints[mStep].caly + ", step = " + mStep);
+ 		}
+ 		else
+ 		{

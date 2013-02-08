@@ -1,0 +1,11 @@
+--- disp_lcd.c.orig	2013-02-08 20:59:48.974335375 +0100
++++ disp_lcd.c	2013-02-05 20:40:13.973632631 +0100
+@@ -1655,7 +1655,7 @@
+     gdisp.screen[sel].b_out_interlace = 0;
+     gdisp.screen[sel].status |= LCD_ON;
+     gdisp.screen[sel].output_type = DISP_OUTPUT_TYPE_LCD;
+-    Lcd_Panel_Parameter_Check(sel);
++//    Lcd_Panel_Parameter_Check(sel);
+     Disp_drc_enable(sel, TRUE);
+ #ifdef __LINUX_OSAL__
+     Display_set_fb_timming(sel);

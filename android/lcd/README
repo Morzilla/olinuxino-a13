@@ -1,0 +1,10 @@
+Adds support for the OLinuXino LCD43TS (4.3" LCD w/ resistive touch).
+
+1. Apply sun4i-ts.patch to lichee/linux-3.0/drivers/input/touchscreen/sun4i-ts.c. This adds support for a screen width of 480 pixels and inversion of the x axis. 
+2. Apply disp_lcd.patch to lichee/linux-3.0/drivers/video/sun5i/disp/de_bsp/de/disp_lcd.c. This removes the LCD parameter checks and warnings (magenta color background and delay) that are triggered when using the LCD43TS default settings. Hopefully this will not hurt the display... :-P
+3. Apply TScalibration.patch to android4.0/device/softwinner/common/packages/TSCalibration2/src/org/zeroxlab/util/tscal/TSCalibrationView.java. This will force the display calibration to go through.
+4. Update your lichee/tools/pack/chips/sun5i/configs/android/a13-evb/sys_config1.fex file:
+[rtp_para]
+rtp_screen_size=4
+rtp_invert_x=1
+

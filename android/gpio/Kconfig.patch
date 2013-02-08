@@ -1,0 +1,17 @@
+--- Kconfig.orig	2013-02-08 20:52:20.404335698 +0100
++++ Kconfig	2013-02-08 17:18:52.773088478 +0100
+@@ -69,6 +69,14 @@
+ 	  To compile this driver as a module, choose M here: the
+ 	  module will be called sun4i-vibrator.
+ 
++config SUN4I_GPIO_UGLY
++	tristate "An ugly sun4i gpio driver"
++	help
++	  Say Y here if you want to use gpio as general input/output.
++
++	  To compile this driver as a module, choose M here: the
++	  module will be called sun4i-gpio.
++
+ config SUNXI_DBGREG
+ 	tristate "Sunxi platform register debug driver"
+ 	help

@@ -1,0 +1,10 @@
+Adds support for the "ugly" GPIO driver.
+
+In lichee/linux-3.0/drivers/misc:
+
+1. Add sun4i-gpio.c
+2. Patch Makefile
+3. Patch Kconfig
+4. make ARCH=arm menuconfig and add "An ugly sun4io gpio driver" in the Drivers > Misc section
+5. Rebuild the image
+
